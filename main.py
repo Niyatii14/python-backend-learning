@@ -28,7 +28,7 @@ def get_posts():
     return {"data": my_posts}
 
 @app.post("/posts")
-def creeate_posts(post: Post):
+def create_posts(post: Post):
     post_dict = post.dict()
     post_dict['id'] = randrange(0,1000000)
     my_posts.append(post_dict)
