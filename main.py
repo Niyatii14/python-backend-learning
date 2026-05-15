@@ -39,3 +39,8 @@ def get_post(id: int):
     post = find_post(id)
     print(post)
     return {"post_detail":post}
+
+@app.get("/posts/latest")
+def get_latest_post():
+    post = my_posts[len(my_posts)-1]
+    return {"detail" : post}
